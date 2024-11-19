@@ -1,4 +1,33 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+    --main-font: 'Inter-Variable', sans-serif;
+    --accent-font: 'PressStart2P-Regular', sans-serif;
+
+    --wdth: 400;
+
+    --background-color: #fff;
+    --background-image: 
+        repeating-linear-gradient(
+            90deg, /* Направление слева направо */
+            #d3d3d3, /* Начало первой полоски */
+            #d3d3d3 2px, /* Конец первой полоски (2px ширина) */
+            transparent 2px, /* Начало второй полоски (прозрачной) */
+            transparent 4px /* Конец второй полоски (2px ширина) */
+        ),
+        repeating-linear-gradient(
+            to bottom, /* Направление вниз */
+            #d3d3d3, /* Начало первой полоски */
+            #d3d3d3 2px, /* Конец первой полоски (2px ширина) */
+            transparent 2px, /* Начало второй полоски (прозрачной) */
+            transparent 4px /* Конец второй полоски (2px ширина) */
+        ),
+        linear-gradient(
+            to bottom,
+            #e7e7e7,
+            #1a1a1a
+        );
     
+    --accent-color: #000;
+
+
 }

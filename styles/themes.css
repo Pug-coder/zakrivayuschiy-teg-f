@@ -6,15 +6,95 @@
 */
 
 :root.theme-dark {
-    
+    --main-font: 'Inter-Variable', sans-serif;
+    --accent-font: 'PressStart2P-Regular', sans-serif;
+
+    --wdth: 465;
+
+    --background-color: #000;
+    --background-image: 
+        repeating-linear-gradient(
+            90deg, /* Направление слева направо */
+            #000, /* Начало первой полоски */
+            #000 2px, /* Конец первой полоски (2px ширина) */
+            transparent 2px, /* Начало второй полоски (прозрачной) */
+            transparent 4px /* Конец второй полоски (2px ширина) */
+        ),
+        repeating-linear-gradient(
+            to bottom, /* Направление вниз */
+            #000, /* Начало первой полоски */
+            #000 2px, /* Конец первой полоски (2px ширина) */
+            transparent 2px, /* Начало второй полоски (прозрачной) */
+            transparent 4px /* Конец второй полоски (2px ширина) */
+        ),
+        linear-gradient(
+            to bottom,
+            #007f0c,
+            #004306
+        );
+    --accent-color: #00cc14;
 }
 
 :root.theme-light {
+    --main-font: 'Inter-Variable', sans-serif;
+    --accent-font: 'PressStart2P-Regular', sans-serif;
 
+    --wdth: 400;
+
+    --background-color: #fff;
+    --background-image: 
+        repeating-linear-gradient(
+            90deg, /* Направление слева направо */
+            #d3d3d3, /* Начало первой полоски */
+            #d3d3d3 2px, /* Конец первой полоски (2px ширина) */
+            transparent 2px, /* Начало второй полоски (прозрачной) */
+            transparent 4px /* Конец второй полоски (2px ширина) */
+        ),
+        repeating-linear-gradient(
+            to bottom, /* Направление вниз */
+            #d3d3d3, /* Начало первой полоски */
+            #d3d3d3 2px, /* Конец первой полоски (2px ширина) */
+            transparent 2px, /* Начало второй полоски (прозрачной) */
+            transparent 4px /* Конец второй полоски (2px ширина) */
+        ),
+        linear-gradient(
+            to bottom,
+            #e7e7e7 0.01%, /*  продлили воздействие самого светлого оттенка */
+            #1a1a1a 100%
+        );
+
+    --accent-color: #000;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     :root {
-        
+        --main-font: 'Inter-Variable', sans-serif;
+        --accent-font: 'PressStart2P-Regular', sans-serif;
+
+        --wdth: 465;
+
+        --background-color: #000;
+        --background-image: 
+            repeating-linear-gradient(
+                90deg, /* Направление слева направо */
+                #000, /* Начало первой полоски */
+                #000 2px, /* Конец первой полоски (2px ширина) */
+                transparent 2px, /* Начало второй полоски (прозрачной) */
+                transparent 4px /* Конец второй полоски (2px ширина) */
+            ),
+            repeating-linear-gradient(
+                to bottom, /* Направление вниз */
+                #000, /* Начало первой полоски */
+                #000 2px, /* Конец первой полоски (2px ширина) */
+                transparent 2px, /* Начало второй полоски (прозрачной) */
+                transparent 4px /* Конец второй полоски (2px ширина) */
+            ),
+            linear-gradient(
+                to bottom,
+                #007f0c,
+                #004306
+            );
+
+        --accent-color: #00cc14;
     }
 }
