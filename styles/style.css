@@ -26,24 +26,100 @@
   background-color: var(--background-color);
   background-image: var(--background-image);
   background-size: cover;
+  background-attachment: fixed;
 }
+
+.header,
+.main,
+.footer {
+  margin-inline: clamp(0rem, 34.742vw - 8.143rem, 23.125rem);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 100px 110px;
+  background-color: var(--background-color);
+  border: 2px solid var(--accent-color);
+}
+
 
 .page__logo {
   display: block;
   font-family: var(--accent-font);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-decoration: none;
   text-transform: uppercase;
+  margin: clamp(7.5rem, 4.923vw + 6.346rem, 8.5rem) auto 20px;
 }
 
 .header__title {
   font-family: var(--accent-font);
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-transform: uppercase;
+  margin-block-end: 25px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-block-end: 25px;
 }
 
 .theme-menu__button {
-  display: inline-flex;
+  display: flex;
+  position: relative;
   border: none;
   background-color: transparent;
-
+  text-transform: uppercase;
   font-family: var(--accent-font);
+  cursor: pointer;
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  padding: 0;
+}
 
+.theme-menu__button:disabled::before {
+  content: '▶';
+  display: block;
+  position: absolute;
+  inline-size: 16px;
+  block-size: 13px;
+  left: -19px;
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+}
+
+.theme-menu__button::after {
+  position: absolute;
+  content: ''; /* Псевдоэлемент создаётся как пустой контент */
+  inline-size: 100%; /* Линия будет по ширине кнопки */
+  bottom: -1px; /* Линия расположена немного ниже текста кнопки */
+  border-bottom: 2px solid var(--accent-color);
+  transform: scale(0); /* Линия изначально скрыта (сжатие до нуля) */
+  transition: transform 0.3s ease; /* Плавный эффект появления */
+  transform-origin: left center; /* Начало анимации слева */
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scale(1); /* Плавное появление линии */
+}
+
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
 }
