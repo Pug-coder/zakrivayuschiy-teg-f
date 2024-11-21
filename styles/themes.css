@@ -35,6 +35,8 @@
     --accent-color: #00cc14;
     
     --shadow-color: #000;
+
+    --floppy-color: #00cc14;
 }
 
 :root.theme-light {
@@ -68,6 +70,8 @@
     --accent-color: #000;
 
     --shadow-color: #e7e7e7;
+
+    --floppy-color: #000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -102,5 +106,7 @@
         --accent-color: #00cc14;
 
         --shadow-color: #000;
+
+        --floppy-color: #00cc14;
     }
 }
