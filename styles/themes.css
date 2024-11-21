@@ -68,10 +68,11 @@
         );
 
     --accent-color: #000;
+    --text-color: #fff;
+    --floppy-color: #fff;
 
     --shadow-color: #e7e7e7;
 
-    --floppy-color: #000;
 }
 
 @media (prefers-color-scheme: dark) {
