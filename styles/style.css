@@ -194,12 +194,99 @@
   align-items: center;
   margin-inline-end: 25px;
   margin-block-end: 25px;
-  cursor: pointer;
 }
 
 .card__like-button {
   background-color: transparent;
   border: transparent;
+}
+
+.contour {
+  fill: var(--heart-contour-color);
+}
+
+.sparks {
+  opacity: 0;
+  fill: var(--heart-sparks-color);
+}
+
+.card__icon-button {
+  block-size: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline-end: 4px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
+}
+
+.card__icon-button .core {
+  fill: transparent;
+  transition: fill 0.3s ease 0.03s; /* Задержка при уходе */
+}
+
+.card__icon-button .main-body {
+  fill: transparent;
+  transition: fill 0.3s ease; /* Без задержки при уходе */
+}
+
+.card__icon-button:hover .core {
+  fill: var(--accent-color);
+  transition: fill 0.3s ease; /* Без задержки */
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s ease 0.05s; /* С задержкой при наведении */
+}
+
+.card__icon-button:active .core {
+  fill: var(--heart-sparks-color);
+  transition: fill 0.3s ease 0.03s;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--heart-main-body-color);
+  transition: fill 0.3s ease;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-sparks-color);
+  transition: fill 0.3s ease;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-main-body-color);
+  transition: fill 0.3s ease 0.03s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-main-body-color);
+  transition: fill 0.3s 0.06s ease;
+}
+
+.like-icon .contour {
+  fill: var(--accent-color);
+  transition: fill 0.1s linear;
+}
+  
+.like-icon.is-liked .heart {
+  animation:  heart-scale 0.3s ease-in 0.1s;
+  transform-origin: center;
+}
+
+.like-icon.is-liked .sparks {
+  animation: spark-fade 0.3s ease-in alternate 0.3s;
 }
 
 .button {
@@ -226,6 +313,7 @@
 
 .action-button {
   position: relative;
+  cursor: pointer;
 }
 
 .action-button:focus-visible {  

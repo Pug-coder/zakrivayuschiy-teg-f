@@ -33,10 +33,16 @@
             #004306
         );
     --accent-color: #00cc14;
-    
+    --text-color: #00cc14;
+
     --shadow-color: #000;
 
     --floppy-color: #00cc14;
+
+    --heart-contour-color: var(--accent-color);
+    --heart-sparks-color: #ff0000;
+    --heart-main-body-color: #ff0000;
+    --heart-core-color: #fff;
 }
 
 :root.theme-light {
@@ -73,6 +79,10 @@
 
     --shadow-color: #e7e7e7;
 
+    --heart-contour-color: var(--accent-color);
+    --heart-sparks-color: #ff0000;
+    --heart-main-body-color: #ff0000;
+    --heart-core-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -105,9 +115,16 @@
             );
 
         --accent-color: #00cc14;
+        --text-color: #00cc14;
+
 
         --shadow-color: #000;
 
         --floppy-color: #00cc14;
+
+        --heart-contour-color: var(--accent-color);
+        --heart-sparks-color: #ff0000;
+        --heart-main-body-color: #ff0000;
+        --heart-core-color: #fff;
     }
 }
