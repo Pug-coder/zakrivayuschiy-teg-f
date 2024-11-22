@@ -315,7 +315,7 @@
   cursor: pointer;
 }
 
-.action-button:focus-visible {  
+.action-button:focus-visible {
   box-shadow: 2px 2px var(--accent-color);
   transition: 0.3s ease;
 }
