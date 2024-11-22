@@ -143,9 +143,9 @@
 }
 
 .main__card-title {
-  --wdth: 700
-  font-variation-settings: 'wdth' var(--wdth);
-  font-size: 18px; 
+  font-variation-settings: 'wdth' var(--title-wdth);
+  font-size: 18px;
+  margin-inline-start: 10px;
 }
 
 
@@ -183,7 +183,6 @@
 }
 
 .main__card-text {
-  --wdth: 400;
   font-variation-settings: 'wdth' var(--wdth);
   font-size: 18px;
 }
@@ -355,6 +354,81 @@
   fill: var(--floppy-color);
   z-index: 1;
   mix-blend-mode: difference;
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  max-inline-size: 353px;
+  display: grid;
+  padding: 30px;
+  grid-template-columns: min-content 1fr;
+  gap: 30px 20px;
+  transition: opacity 0.3s ease-in-out;
+  border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+  backdrop-filter: blur(7px);
+}
+
+.dialog:not([open]) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dialog .floppy {
+  inline-size: 39px;
+  block-size: 39px;
+  align-self: center;
+}
+
+.dialog__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight:var(--wdth);
+  color: var(--accent-color);
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog__button {
+  grid-column: span 2;
+  padding: 9px 17px;
+  background-color: transparent;
+  font-family: var(--accent-font);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.filter-saturate-blur {
+  filter: saturate(130%) blur(2px);
+}
+
+.filter-blur-grayscale {
+  filter: blur(3px) grayscale(30%);
+}
+
+.filter-hue {
+  filter: hue-rotate(45deg);
+}
+
+.filter-sepia {
+  filter: sepia(80%);
+}
+
+.filter-grayscale {
+  filter: grayscale(60%);
+}
+
+.filter-contrast {
+  filter: contrast(140%)
+}
+
+.filter-saturate {
+  filter: saturate(160%);
 }
 
 @media (width <= 375px) {
